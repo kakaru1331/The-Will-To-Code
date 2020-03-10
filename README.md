@@ -3,3 +3,4 @@
 What does not crash application makes me stronger
 
 * cheeze - how do you think
+* Oasis - Whatever
