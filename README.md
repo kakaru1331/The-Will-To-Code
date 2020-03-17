@@ -9,3 +9,4 @@ What does not crash application makes me stronger
 * Fun. - We Are Young
 * cheeze - how do you think
 * DRP LIVE - Martini Blue
+* typo - typo
