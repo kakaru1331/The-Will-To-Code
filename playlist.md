@@ -15,4 +15,4 @@
 * HYUKOH - TOMBOY
 * Owl City - Good Time
 * Yerin Beak - Blooming Memories
-* Shine - Mr. Big
+* Mr. Big - Shine
