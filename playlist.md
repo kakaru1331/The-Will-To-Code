@@ -9,3 +9,4 @@
 * DRP LIVE - Martini Blue
 * BOL4 - To My Youth
 * Adele - Hello
+* Coldplay - Paradise
