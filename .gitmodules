@@ -1,0 +1,3 @@
+[submodule "partial"]
+	path = partial
+	url = git@github.com:kakaru1331/THE-WILL-TO-CODE-PARTIAL.git
