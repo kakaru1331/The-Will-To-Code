@@ -1,28 +1,27 @@
-import React, { Component, ReactNode } from 'react';
-import { Text, View } from 'react-native';
+import React from 'react';
+import { View, Text, Image, ScrollView, TextInput } from 'react-native'
 
-type Props = {
-  name: ReactNode
-}
-
-class Greeting extends Component<Props> {
-  render() {
-    return (
-      <View style={{ alignItems: 'center' }}>
-        <Text>Hello {this.props.name}!</Text>
+export default function App() {
+  const imageURI = ''
+  
+  return (
+    <ScrollView>
+      <Text>Some Text</Text>
+      <View>
+        <Text>Some more text</Text>
+        <Image
+          source="https://reactnative.dev/docs/assets/p_cat2.png"
+          style={{width: 200, height: 200}}
+        />
       </View>
-    )
-  }
-}
-
-export default class LotsOfGreetings extends Component {
-  render() {
-    return (
-      <View style={{ alignItems: 'center', top: 50}}>
-        <Greeting name='Rexxar' />
-        <Greeting name='Jaina' />
-        <Greeting name='Valeera' />
-      </View>
-    )
-  }
+      <TextInput
+        style={{
+          height: 40,
+          borderColor: 'gray',
+          borderWidth: 1
+        }}
+        defaultValue="You can type in me"
+      />
+    </ScrollView>
+  );
 }
