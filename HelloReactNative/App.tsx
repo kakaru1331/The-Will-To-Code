@@ -1,53 +1,27 @@
-import React, { Component } from 'react'
-import {
-  StyleSheet,
-  TouchableOpacity,
-  Text,
-  View
-} from 'react-native'
+import React from 'react';
+import { View, Text, Image, ScrollView, TextInput } from 'react-native'
 
-class App extends Component {
-  state = {
-    count: 0
-  }
-
-  onPress = () => {
-    this.setState({
-      count: this.state.count + 1
-    })
-  }
-
-  render() {
-    return(
-      <View style={styles.container}>
-        <TouchableOpacity
-          style={styles.button}
-          onPress={this.onPress}
-        >
-          <Text>Click me</Text>
-        </TouchableOpacity>
-        <View style={styles.container}>
-          <Text>
-            You clicked { this.state.count } times
-          </Text>
-        </View>
+export default function App() {
+  const imageURI = ''
+  
+  return (
+    <ScrollView>
+      <Text>Some Text</Text>
+      <View>
+        <Text>Some more text</Text>
+        <Image
+          source="https://reactnative.dev/docs/assets/p_cat2.png"
+          style={{width: 200, height: 200}}
+        />
       </View>
-    )
-  }
+      <TextInput
+        style={{
+          height: 40,
+          borderColor: 'gray',
+          borderWidth: 1
+        }}
+        defaultValue="You can type in me"
+      />
+    </ScrollView>
+  );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-  button: {
-    alignItems: 'center',
-    backgroundColor: '#DDDDDD',
-    padding: 10,
-    marginBottom: 10
-  }
-})
-
-export default App;
