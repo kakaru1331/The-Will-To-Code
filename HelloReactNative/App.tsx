@@ -1,28 +1,53 @@
-import React, { Component, ReactNode } from 'react';
-import { Text, View } from 'react-native';
+import React, { Component } from 'react'
+import {
+  StyleSheet,
+  TouchableOpacity,
+  Text,
+  View
+} from 'react-native'
 
-type Props = {
-  name: ReactNode
-}
+class App extends Component {
+  state = {
+    count: 0
+  }
 
-class Greeting extends Component<Props> {
+  onPress = () => {
+    this.setState({
+      count: this.state.count + 1
+    })
+  }
+
   render() {
-    return (
-      <View style={{ alignItems: 'center' }}>
-        <Text>Hello {this.props.name}!</Text>
+    return(
+      <View style={styles.container}>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={this.onPress}
+        >
+          <Text>Click me</Text>
+        </TouchableOpacity>
+        <View style={styles.container}>
+          <Text>
+            You clicked { this.state.count } times
+          </Text>
+        </View>
       </View>
     )
   }
 }
 
-export default class LotsOfGreetings extends Component {
-  render() {
-    return (
-      <View style={{ alignItems: 'center', top: 50}}>
-        <Greeting name='Rexxar' />
-        <Greeting name='Jaina' />
-        <Greeting name='Valeera' />
-      </View>
-    )
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  button: {
+    alignItems: 'center',
+    backgroundColor: '#DDDDDD',
+    padding: 10,
+    marginBottom: 10
   }
-}
+})
+
+export default App;
