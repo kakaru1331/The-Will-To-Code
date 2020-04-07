@@ -21,6 +21,6 @@ jobs:
 
     - name: package install and unit test
       run: |
-        cd client
+        cd ./client
         npm install
         npm run test:unit
