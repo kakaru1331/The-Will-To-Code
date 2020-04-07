@@ -20,8 +20,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
-    - name: package install and unit test
-      run: |
+    - run: |
         cd client
         npm install
         npm run test:unit
