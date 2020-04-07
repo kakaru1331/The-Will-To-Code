@@ -10,21 +10,17 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
-
+  test:
     runs-on: ubuntu-latest
-
     strategy:
       matrix:
         node-version: [12.x]
 
     steps:
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
     - run: cd client
     - run: npm install
     - run: npm run test:unit
-      env:
-        CI: true
