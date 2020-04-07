@@ -1,4 +1,4 @@
-name: CI
+name: Client Unit Test
 
 on:
   push:
@@ -19,7 +19,7 @@ jobs:
         # Version Spec of the version to use.  Examples: 10.x, 10.15.1, >=10.15.0
         node-version: 12.13.1
 
-    - name: install, build and test
+    - name: package install and unit test
       run: |
         cd client
         npm install
