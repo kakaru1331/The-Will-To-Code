@@ -15,12 +15,12 @@ jobs:
         node-version: [12.x]
 
     steps:
-    - uses: actions/checkout
-      uses: actions/setup-node@v1
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: package install and unit test
-      run: |
+
+    - run: |
         cd client
         npm install
         npm run test:unit
